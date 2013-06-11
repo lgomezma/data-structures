@@ -26,7 +26,7 @@ void list_destroy(List *list){
 int list_ins_next(List *list, ListElmt *element, const void *data){
 	ListElmt *new_element;
 
-	if(new_element = (ListElmt *)malloc(sizeof(ListElmt)) == NULL)
+	if((new_element = (ListElmt *)malloc(sizeof(ListElmt))) == NULL)
 		return -1;
 
 	new_element->data = (void *)data;
